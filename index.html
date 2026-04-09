@@ -3,78 +3,143 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+    <title id="title"></title>
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <title id="nameTitle">Studio Glam - Peluquería</title>
+
+    <!-- Fuente Premium -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-  <body>
-    <header>
-      <h1 id="nameFront">Studio Glam</h1>
+  <body
+    class="text-gray-800"
+    style="font-family: &quot;Poppins&quot;, sans-serif"
+  >
+    <!-- NAVBAR -->
+    <header class=" bg-white/80 backdrop-blur border-b z-50">
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <!-- LOGO -->
+        <h1 id="businessName" class="text-lg font-semibold tracking-wide"></h1>
 
-      <nav>
-        <a href="#service">Servicios</a>
-        <a href="#gallery">Galería</a>
-        <a href="#contact">Contacto</a>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <div>
-        <h2>Tu estilo empieza aquí</h2>
-        <p>Cortes modernos, coloración profesional y peinados increíbles</p>
-
-        <a class="btn" target="_blank" id="btnR" href="https://wa.me/"
-          >Reservar por WhatsApp</a
-        >
-      </div>
-    </section>
-
-    <section id="service" class="services">
-      <h2>Nuestros Servicios</h2>
-
-      <div class="service-grid">
-        <div id="content" class="service">
-          <h3 id="name">Corte de cabello</h3>
-          <p id="description">Estilos modernos adaptados a tu personalidad.</p>
+        <!-- NAV -->
+        <div class="hidden md:flex items-center gap-8 text-sm text-gray-600">
+          <a href="#services" class="hover:text-black transition">Servicios</a>
+          <a href="#gallery" class="hover:text-black transition">Galería</a>
+          <a href="#contact" class="hover:text-black transition">Contacto</a>
         </div>
 
-       
+        <!-- CTA -->
+        <a
+          id="whatsappNav"
+          class="bg-black text-white px-5 py-2 rounded-full text-sm hover:opacity-80 transition"
+        >
+          Contactar
+        </a>
       </div>
-    </section>
+    </header>
 
-    <section id="gallery" class="gallery">
-      <h2>Galería</h2>
+    <!-- HERO -->
+    <section  class="py-24 text-center bg-white" id="hero" >
+      <div id="heroContent" >
+      <h2 id="heroTitle" class="text-5xl font-semibold mb-6 leading-tight"></h2>
 
-      <div class="gallery-grid">
-        <img src="assets/images/gallery1.jpeg" />
-        <img src="assets/images/gallery2.jpeg" />
-        <img src="assets/images/gallery3.jpeg" />
-        <img class="picture4" src="assets/images/gallery4.jpeg" />
-        <img src="assets/images/gallery5.jpeg" />
-        <img src="assets/images/gallery6.jpeg" />
-      </div>
-    </section>
-    <section id="contact" class="contact">
-      <h2>Contacto</h2>
+      <p
+        id="heroSubtitle"
+        class="text-gray-500 max-w-xl mx-auto mb-8 text-lg"
+      ></p>
 
-      <p id="address">📍 Calle Principal 123</p>
-      <p id="footerPhone">📞 +57 300 000 0000</p>
-      <p id="hours">🕒 Lunes a Sábado 9:00 - 19:00</p>
-
-      <br />
-
-      <a class="btn" target="_blank" id="btnC" href="https://wa.me/"
-        >Reservar cita</a
+      <a
+        id="whatsappHero"
+        class="bg-black text-white px-8 py-3 rounded-full  text-sm tracking-wide hover:opacity-60 transition"
       >
+        Contactar ahora
+      </a>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="py-20 bg-gray-50 text-center">
+      <h3 class="text-3xl font-semibold mb-12">Nuestros Servicios</h3>
+
+      <div
+        id="services"
+        class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto px-6"
+      ></div>
+    </section>
+
+    <!-- GALERÍA PRO -->
+    <section class="py-20 bg-white text-center">
+      <h3 id="galleryTitle" class="text-3xl font-semibold mb-12">Nuestro Trabajo</h3>
+
+      <div
+        id="gallery"
+        class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto px-4"
+      ></div>
+
+      <div class="text-center mt-10">
+        <a
+        id="downloadButton"
+          target="_blank"
+          href="./assets/files/menu.jpg"
+          download
+          class="bg-black text-white px-6 py-3 rounded-lg"
+        >
+          Ver menú completo
+        </a>
+      </div>
+    </section>
+    
+
+    <!-- TESTIMONIOS -->
+    <section class="py-20 bg-gray-100 text-center">
+      <h3 class="text-3xl font-semibold mb-10">
+        Lo que dicen nuestros clientes
+      </h3>
+
+      <div class="max-w-3xl mx-auto space-y-6 text-gray-600">
+        <p>"Excelente servicio, muy recomendados"</p>
+        <p>"Atención rápida y profesional"</p>
+        <p>"Volvería sin dudarlo"</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-black text-white text-center py-20">
+      <h3 class="text-3xl font-semibold mb-4">¿Necesitas más información?</h3>
+
+      <p class="mb-6 text-gray-300">Escríbenos y recibe atención inmediata</p>
+
+      <a
+        id="whatsappFinal"
+        class="bg-white text-black px-8 py-3 rounded-full text-sm hover:opacity-80 transition"
+      >
+        Escríbenos
+      </a>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contact" class="py-20 text-center">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+      <h3 class="text-3xl font-semibold mb-6">Contacto</h3>
+
+      <p id="address" class="text-gray-600"></p>
+      <p id="phone" class="text-gray-600"></p>
+      <p id="hours" class="mb-6"></p>
       <iframe
         class="w-full h-80 rounded-lg"
         src="https://maps.google.com/maps?q=4.207167,-74.639123&t=&z=16&ie=UTF8&iwloc=&output=embed"
       >
       </iframe>
+      </div>
     </section>
-
-    <section  class="py-16 text-center social">
+    <section class="bg-white py-16 text-center">
       <h3 class="text-3xl font-bold mb-6">Síguenos en nuestras redes</h3>
 
       <p class="mb-8">Descubre nuestros platos, promociones y novedades</p>
@@ -121,12 +186,30 @@
         </a>
       </div>
     </section>
-    
 
-    <footer>
-      <p id="footerName">© 2026 Studio Glam - Peluquería</p>
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white text-center py-6">
+      <p id="footerName"></p>
     </footer>
+
+    <!-- BOTÓN WHATSAPP FLOTANTE -->
+    <a
+      id="whatsappFloat"
+      class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg text-xl hover:scale-110 transition"
+    >
+      💬
+    </a>
+
+    <!-- LIGHTBOX -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center"
+    >
+      <img id="lightboxImg" class="max-w-[90%] max-h-[90%] rounded-xl" />
+    </div>
+
     <script src="config.js"></script>
-    <script src="js/main.js"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
